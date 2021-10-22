@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route ,HashRouter} from 'react-router-dom'///hashRouter for gh-pages replace router
+import Home from './dependances/pages/Home';
+import React, { Component } from 'react';
+import Apropos from './dependances/pages/APropos';
+import Fichelogement from './dependances/pages/FicheLogement';
+import Pagenotfound from './dependances/pages/PageNotFound';
 
-function App() {
-  return (
+class App extends Component{
+  render() {
+     return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+            <Switch>
+              <Route exactPath="/" component={Home}/>
+              <Route Path="/apropos" component={Apropos}/>
+              <Route Path="/fiche-logement" component={Fichelogement}/>
+              <Route Path="/" component={Pagenotfound}/>
+            </Switch>
+        </Router>
     </div>
   );
-}
+}}
 
 export default App;
