@@ -1,0 +1,252 @@
+/*header*/
+.header {
+  position: relative;
+  max-width: 1250px;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5vh 0;
+  a {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 142.6%;
+    margin-left: 57px;
+    cursor: pointer;
+  }
+}
+.underline {
+  text-decoration-line: underline;
+}
+/*header-picture*/
+
+.header-picture {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  isolation: isolate;
+  height: 223px;
+  width: 80vw;
+  background: rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  border-radius: 25px;
+  margin-bottom: 5vh;
+  h1 {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 45%;
+    bottom: 50%;
+    white-space: nowrap;
+    color: white;
+    z-index: 10;
+  }
+  img {
+    mix-blend-mode: darken;
+    min-width: 100%;
+    background-size: cover;
+  }
+}
+
+/*thumbs*/
+.thumbs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+
+  .thumbs-list {
+    padding: 31px 25px;
+    max-width: 1190px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background: #f7f7f7;
+    border-radius: 25px;
+    :hover {
+      img {
+        filter: brightness(0.91);
+        transform: scale(1.02);
+      }
+    }
+    .thumb {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      position: relative;
+      overflow: hidden;
+      width: 340px;
+      height: 340px;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(0, 0, 0, 0.5) 100%
+      );
+      border-radius: 10px;
+      margin: 25px;
+
+      img {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        align-self: center;
+        justify-self: center;
+        transition: 0.3s;
+        cursor: pointer;
+      }
+      p {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 142.6%;
+        position: relative;
+        z-index: 10;
+        margin: 0 20px 0px 20px;
+        color: white;
+        overflow: hidden;
+        height: 52px;
+        width: 300px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+/*fiche produit*/
+
+.product-picture {
+  width: 80vw;
+  height: 415px;
+  margin-bottom : 3vh;
+  position: relative;
+  .arrow-pic {
+    position:absolute;
+    height:80px;
+    width:47px;
+    z-index: 10;
+    top: 50%;
+    cursor: pointer;
+  }
+  .left-arrow{
+    transform : rotate(0deg);
+    margin : -40px 0px 0px 24px ;
+    }
+
+.right-arrow{
+    right: 0%;
+    transform : rotate(180deg);
+    margin : -40px 24px 0px 0 ;
+    }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    align-self: center;
+    justify-self: center;
+    border-radius: 25px;
+  }
+}
+/*product information*/
+.product-info {
+  display: flex;
+  justify-content: space-between;
+
+  width: 80vw;
+  h1{
+      font-weight: 500;
+    font-size: 36px;
+    line-height: 142.6%;
+    margin : 0;
+  }
+ .product-location{
+    font-size: 18px;
+    line-height: 142.6%;
+    margin-bottom: 20px;
+  }
+  .product-profile{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 25%;
+     
+  }
+  .product-description{
+width:75%;
+  }
+}
+.stars{
+    height:32px;
+    width: 200px;
+    img{
+        margin-left: 10px;
+    }
+}
+.profile-picture {
+  display: flex;
+  justify-content: flex-end;
+  
+  img {
+    height: 64px;
+    width: 64px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  p {
+    margin-right: 10px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+
+  }
+  .profile-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.tags-list {
+  display: flex;
+  .tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 115px;
+    height: 25px;
+    border-radius: 10px;
+    background: $Red;
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    margin-right: 10px;
+    padding: 0 10px;
+  }
+}
+/* dropdown menus */
+
+.dropdown-paragraph{
+    display: flex;
+    flex-direction: column;
+    width:40vw;
+     height: 250px;
+}
+.dropdown-header{
+    background : $Red;
+    color: white;
+    height : 52px;
+    
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0 10px;
+    border: radius 10px;
+}
+.dropdown-content{
+
+   background : $Grey;
+   border-radius  : 0px 0px 10px 10px;
+   
+    overflow :auto;
+    padding : 40px 12px 20px 20px;
+}

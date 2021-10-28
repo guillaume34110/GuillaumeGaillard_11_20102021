@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
+import logo from "../assets/logo/logo-kasa.png"
 
 class Logo extends Component {
     render() {
         return (
             <div>
-                <img src = "../assets/logo/Vector.png"/>
-                <img className ="logo-house" src = "../assets/logo/Vector-3.png "/>
-                <img src = "../assets/logo/Vector-1.png "/>
-                <img src = "../assets/logo/Vector-2.png "/>
+               
+                <img src ={logo}/>
             </div>
         );
     }
