@@ -5,17 +5,23 @@ $Red :  #ff6060;
 $Grey :  #F7F7F7; 
 li{
     list-style: none;
+    cursor:default;
 }
 ul{
     margin : 0;
     padding : 0;
 }
-a{
-    text-decoration-line: none;
-}
 p{
     margin : 0;
     padding : 0;
+    cursor:default;
+}
+body{
+    -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+&::-webkit-scrollbar {
+    display: none;
+  }
 }
 .main{
     display : flex;
@@ -25,4 +31,7 @@ p{
     font-family: $font;
     color: $Red;
     height: 100%;
+    min-height: 100vh;
+    cursor:default;
+    
 }

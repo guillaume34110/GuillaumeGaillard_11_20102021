@@ -8,14 +8,14 @@ class Productinfo extends Component {
         return (
             <section className = "product-info">
                 <div className = "product-description">
-                <h1>{this.props.data.title}</h1>
-                <p className = "product-location">{this.props.data.location}</p>
-                <Tag tagNames = {this.props.data.tags}/>
+                <h1>{this.props.data?.title}</h1>
+                <p className = "product-location">{this.props.data?.location}</p>
+                <Tag tagNames = {this.props.data?.tags}/>
                 
                 </div>
                 <div className = "product-profile">
-                    <Profilepicture host = {this.props.data.host}/>
-                    <Stars starsNumber = {this.props.data.rating}/>
+                    <Profilepicture host = {this.props.data?.host}/>
+                    <Stars starsNumber = {this.props.data?.rating}/>
                 </div>
             </section>
         );

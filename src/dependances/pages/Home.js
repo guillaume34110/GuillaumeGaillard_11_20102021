@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Headerpicture from '../components/HeaderPicture';
 import Thumb from '../components/Thumb';
@@ -23,6 +24,7 @@ class Home extends Component {
                <Header />
                <Headerpicture  />
                <Thumb datas = {this.state.datas} setData = {this.props.setData}/>
+               <Footer />
             </div>
         );
     }

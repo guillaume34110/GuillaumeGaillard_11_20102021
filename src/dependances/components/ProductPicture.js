@@ -23,7 +23,7 @@ class ProductPicture extends Component {
         return (
             <div className="product-picture">
                 <img className = "left-arrow arrow-pic" src = {arrow}  alt = "fléche" onClick = {previousPicture}/>
-                <img className ="main-img" src = {this.props.data.pictures[this.state.token]} alt = {this.props.data.title} />
+                <img className ="main-img" src = {this.props.data?.pictures[this.state.token]} alt = {this.props.data?.title} />
                 <img className = "right-arrow arrow-pic"src = {arrow} alt = "fléche" onClick = {nextPicture}/>
             </div>
         );

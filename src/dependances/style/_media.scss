@@ -1,0 +1,172 @@
+@media (max-width: 800px) {
+  .header {
+    width: 90vw;
+    img {
+      height: 47px;
+      width: 145px;
+    }
+    p {
+      font-weight: 500;
+      font-size: 12px;
+      margin-left: 10px;
+      text-transform: uppercase;
+    }
+  }
+
+  /*header-picture*/
+
+  .header-picture {
+    width: 90vw;
+    height: 111px;
+    h1 {
+      white-space: normal;
+      width: 100%;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 100%;
+      top: 35%;
+      left: 5%;
+      width: 217px;
+    }
+  }
+  /*thumbs*/
+  .thumbs {
+    .thumbs-list {
+      width: 100vw;
+      border-radius: 0;
+      padding: 31px 0;
+      .thumb {
+        max-width: 335px;
+        height: 70vw;
+        max-height: 225px;
+      }
+    }
+  }
+
+  /*fiche produit*/
+
+  .product-picture {
+    width: 90vw;
+    height: 255px;
+    .arrow-pic {
+      height: 20px;
+      width: 12px;
+      top: 60%;
+    }
+  }
+  /*product information*/
+  .product-info {
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      font-weight: 500;
+      font-size: 18px;
+    }
+    .product-location {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+    .product-profile {
+      flex-direction: row-reverse;
+      align-items: center;
+      width: 90vw;
+    }
+    .product-description {
+      width: 90vw;
+      margin-bottom: 10px;
+    }
+  }
+  .stars {
+    height: 15px;
+    width: 120px;
+    img {
+      margin-left: 0;
+      margin-right: 5px;
+      height: 15px;
+    }
+  }
+  .profile-picture {
+    img {
+      height: 32px;
+      width: 32px;
+    }
+    p {
+      font-size: 12px;
+      line-height: 17px;
+    }
+  }
+  .tags-list {
+    flex-wrap: wrap;
+
+    .tag {
+      margin-bottom: 10px;
+      font-size: 10px;
+      min-width: 84px;
+    }
+  }
+  /* dropdown menus */
+  .dropdowns {
+    flex-direction: column;
+    align-items: center;
+    width: 90vw;
+  }
+  .dropdown {
+    width: 90vw;
+  }
+  .dropdown-maxi {
+    width: 90vw;
+    min-width: 300px;
+  }
+  .dropdown-header {
+    height: 30px;
+    font-size: 13px;
+    img {
+      height: 8px;
+      width: 15px;
+    }
+  }
+  .dropdown-content {
+    margin-bottom: 10px;
+    padding: 23px 12px 5px 7px;
+    font-size: 12px;
+    line-height: 142.6%;
+  }
+  .collapse {
+    max-height: 0px;
+    padding: 0 12px 0 7px;
+  }
+  .dropdown-content-list,
+  .dropdown-content-paragraph {
+    height: 110px;
+  }
+  /*page not found*/
+  .page-not-found {
+    h1 {
+      margin-top: 15vh;
+      font-size: 96px;
+    }
+    h2 {
+      font-size: 18px;
+      width: 260px;
+    }
+    p {
+      font-size: 14px;
+      margin-bottom: 25vh;
+    }
+  }
+  /*a propos*/
+  .a-propos-picture {
+    width: 90vw;
+    mix-blend-mode: darken;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    img {
+      background-image: url("../assets/Background-smartphone-apropos.png");
+      background-repeat: no-repeat;
+    }
+  }
+  /*footer*/
+  .footer {
+    font-size: 12px;
+  }
+}

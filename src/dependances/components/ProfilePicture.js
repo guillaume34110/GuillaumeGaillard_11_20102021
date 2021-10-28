@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router';
 
 class Profilepicture extends Component {
     constructor(props) {
@@ -10,11 +11,13 @@ class Profilepicture extends Component {
         }
     }
     componentDidMount(){
-        console.log(this.state.host.name,"name")
-        let newName = this.state.host.name.split(/([^\s]+)/)
+        console.log(this.state.host?.name,"name")
+        let newName = this.state.host?.name.split(/([^\s]+)/)
         console.log(newName,"name2")
+        if (this.state.host){
         this.setState({firstName :newName[1] })
         this.setState({lastName :newName[3] })
+    }else this.props.history.push('/') 
     }
     render() {
         return (
@@ -23,11 +26,11 @@ class Profilepicture extends Component {
                 <p>{this.state.firstName} </p>
                 <p>{this.state.lastName} </p>
                 </div>
-                <img src ={this.state.host.picture} alt = " photo de profil"/>
+                <img src ={this.state.host?.picture} alt = " photo de profil"/>
                
             </div>
         );
     }
 }
 
-export default Profilepicture;
+export default withRouter(Profilepicture)
