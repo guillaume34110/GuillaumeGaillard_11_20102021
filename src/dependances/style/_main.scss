@@ -222,8 +222,10 @@
 }
 .tags-list {
   display: flex;
+  flex-wrap: wrap;
   .tag {
     display: flex;
+    
     align-items: center;
     justify-content: center;
     min-width: 115px;
@@ -234,6 +236,7 @@
     font-weight: 500;
     font-size: 14px;
     margin-right: 10px;
+    margin-bottom: 10px;
     padding: 0 10px;
   }
 }
@@ -271,6 +274,7 @@
   justify-content: space-between;
   padding: 0 10px;
   border-radius: 10px;
+  z-index: 11;
   img {
     cursor: pointer;
     transition:  1s ease-in-out;
@@ -288,7 +292,7 @@
   max-height: 250px;
   padding: 45px 12px 20px 20px;
   margin-bottom: 30px;
-   overflow: hidden;
+  overflow: hidden;
    line-height: 142.6%;
 }
 .collapse {
@@ -299,7 +303,8 @@
 }
 .dropdown-content-list ,.dropdown-content-paragraph{
 height:190px;
-overflow: auto;
+overflow: scroll;
+z-index: 10;
 -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 &::-webkit-scrollbar {
