@@ -16,12 +16,9 @@ class Thumb extends Component {
 
     render() {
         const redirect = (e) => {
-           
-            console.log(this.props,'props', e,'data')
             this.props.datas.forEach(thumb => {
                 if(thumb.id === e.target.dataset.data) this.props.setData(thumb)
             });
-        
         this.props.history.push('/fiche-logement') 
     }
         return (

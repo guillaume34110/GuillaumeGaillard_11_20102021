@@ -15,7 +15,6 @@ class ProductPicture extends Component {
             else this.setState({token :0})
         }
         const previousPicture = () => {
-            console.log("set",this.state.token,this.props.data.pictures.length)
             let newValue = this.state.token -1
             if (this.state.token > 0) this.setState({token :newValue})
             else this.setState({token :this.props.data.pictures.length-1})

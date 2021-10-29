@@ -25,7 +25,6 @@ class AProposDropDowns extends Component {
             dropdown.classList.add('collapse')
             arrow.style.transform = 'rotate(180deg)'
         }
-        console.log(aProposData)
     }
     timeout(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));

@@ -11,7 +11,6 @@ class Header extends Component {
         
 }
     componentDidMount() {
-        console.log(window.innerWidth)
         if (this.props.history.location.pathname === "/") document.querySelector(".header-acceuil").classList.add('underline')
         else if(this.props.history.location.pathname === "/apropos") document.querySelector(".header-apropos").classList.add('underline')
         else if(this.props.history.location.pathname !== "/apropos" && window.innerWidth < 800) document.querySelector(".header-acceuil").classList.add('underline')

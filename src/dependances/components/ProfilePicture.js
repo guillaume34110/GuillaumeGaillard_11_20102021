@@ -11,9 +11,7 @@ class Profilepicture extends Component {
         }
     }
     componentDidMount(){
-        console.log(this.state.host?.name,"name")
         let newName = this.state.host?.name.split(/([^\s]+)/)
-        console.log(newName,"name2")
         if (this.state.host){
         this.setState({firstName :newName[1] })
         this.setState({lastName :newName[3] })
