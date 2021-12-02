@@ -10,6 +10,7 @@ class AProposDropDowns extends Component {
         dropdown.style.transition = "0s "
         arrow.style.transition = "0s"
         if (this.props.token !== 2) this.toggleDropDown()
+        else arrow.style.transform = 'rotate(0deg)'
         await this.timeout(50)
         dropdown.style.transition = "1s linear"
         arrow.style.transition = "1s ease"
