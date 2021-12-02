@@ -48,12 +48,11 @@
     z-index: 10;
   }
   img {
-    background-image: url('../assets/a-propos-picture.png');
     mix-blend-mode: darken;
     position: absolute;
     z-index: 1;
-    width: 100%;
-    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
     background-size: cover;
     align-self: center;
     justify-self: center;
@@ -61,7 +60,11 @@
     color: transparent;
   }
 }
-
+.a-propos-picture {
+  img {
+    background-image: url('../assets/a-propos-picture.png');
+}
+}
 /*thumbs*/
 .thumbs {
   display: flex;
