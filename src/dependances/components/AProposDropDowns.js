@@ -3,7 +3,7 @@ import { aProposData } from "../database/aProposData"
 import arrow from "../assets/arrow.png"
 class AProposDropDowns extends Component {
 
-    async componentDidMount() {
+    async componentDidMount() { //fermeture des dropdown sauf Service (si service fermé pas besoin de la fonction)
       
         const dropdown = document.querySelector(`.dropdown-content-${aProposData[this.props.token].title}`)
         const arrow = document.querySelector(`.dropdown-${aProposData[this.props.token].title} img`)
@@ -26,14 +26,11 @@ class AProposDropDowns extends Component {
             arrow.style.transform = 'rotate(180deg)'
         }
     }
-    timeout(ms) {
+    timeout(ms) { // fonction qui permet les temporisation 
         return new Promise(resolve => setTimeout(resolve, ms));
     }
     render() {
-
         return (
-
-
             <div className={"dropdown-maxi dropdown-" + aProposData[this.props.token].title}>
                 <div className="dropdown-header">
                     <p>{aProposData[this.props.token].title}</p>
@@ -43,7 +40,6 @@ class AProposDropDowns extends Component {
                     <p>{aProposData[this.props.token].content}</p>
                 </div>
             </div>
-
         );
     }
 }

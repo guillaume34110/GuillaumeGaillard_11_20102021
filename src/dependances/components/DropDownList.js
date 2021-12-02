@@ -7,13 +7,14 @@ class Dropdownlist extends Component {
             title : this.props.data?.title,
             list: this.props.data?.equipments,
         }
+        this.dropdownContentList = React.createRef()
+        this.arrowPicture = React.createRef()
     }
     render() {
 
         const toggleDropDown = () => {
-            const dropdown = document.querySelector('.dropdown-content-list')
-            const arrow = document.querySelector('.dropdown-header-list img')
-            
+            const dropdown = this.dropdownContentList.current
+            const arrow = this.arrowPicture.current
             if ( dropdown.classList.contains('collapse')) {
                 dropdown.classList.remove('collapse')
                 arrow.style.transform = 'rotate(0deg)'
@@ -26,11 +27,11 @@ class Dropdownlist extends Component {
 
         return (
             <div className="dropdown">
-                <div className="dropdown-header dropdown-header-list">
+                <div className="dropdown-header dropdown-header-list" >
                     <p>{this.state.title}</p>
-                    <img src = {arrow} alt = "fléche" onClick ={toggleDropDown} />
+                    <img src = {arrow} alt = "fléche" onClick ={toggleDropDown}  ref ={this.arrowPicture}/>
                 </div>
-                <div className="dropdown-content dropdown-content-list ">
+                <div className="dropdown-content dropdown-content-list collapse "ref ={this.dropdownContentList}>
                     <ul>{this.state.list && this.state.list.map((equipment,index) => (
                         <li key={index} className="equipement">{equipment}</li>
                     ))}</ul>

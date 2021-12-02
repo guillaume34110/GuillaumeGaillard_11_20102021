@@ -10,7 +10,7 @@ class Stars extends Component {
 
         }
     }
-    componentDidMount() {
+    componentDidMount() { // confection et remplissage des étoiles
         for (let i = 0; i < 5; i++) {
             if (parseInt(this.state.starsNumber) > i) {
                 let starsBuffer = this.state.stars
