@@ -10,18 +10,18 @@ class Stars extends Component {
 
         }
     }
-    componentDidMount() { // confection et remplissage des étoiles
+    componentDidUpdate() { // confection et remplissage des étoiles
+        if (this.state.starsNumber !== this.props.starsNumber) {this.setState({starsNumber:this.props.starsNumber})
+       let starsBuffer = []
         for (let i = 0; i < 5; i++) {
-            if (parseInt(this.state.starsNumber) > i) {
-                let starsBuffer = this.state.stars
+            if (parseInt(this.props.starsNumber) > i) {
                 starsBuffer[i] = fullStar
-                this.setState({ stars: starsBuffer })
             } else {
-                let starsBuffer = this.state.stars
                 starsBuffer[i] = emptyStar
-                this.setState({ stars: starsBuffer })
             }
         }
+        if ( this.state.stars !== starsBuffer )this.setState({ stars: starsBuffer })
+    }
     }
     render() {
 

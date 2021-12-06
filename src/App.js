@@ -8,6 +8,7 @@ import Pagenotfound from './dependances/pages/PageNotFound';
 class App extends Component{
   constructor(props) {
     super(props);
+  
     this.state = {
         data:null 
     }
@@ -23,7 +24,7 @@ setData = (newData) =>{ //methode pour charger les donées de la nouvelle page
             <Switch>
               <Route exact path="/" component={() => (<Home setData={this.setData } />)}/>
               <Route exact path="/apropos" component={Apropos}/>
-              <Route exact path="/fiche-logement" component={() => (<Fichelogement data={this.state.data }/>)}/>
+              <Route exact path="/fiche-logement/:id" component={() => (<Fichelogement  data={this.state.data }/>)}/>
               <Route Path="/" component={Pagenotfound}/>
             </Switch>
         </Router>

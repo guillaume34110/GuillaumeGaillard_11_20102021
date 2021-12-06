@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router';
-import App from '../../App';
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -13,20 +14,17 @@ class Thumb extends Component {
         
 }
     render() {
-        const redirect = (e) => { //redirection au click sur l'element
-            this.props.datas.forEach(thumb => {
-                if(thumb.id === e.target.dataset.data) this.props.setData(thumb)
-            });
-        this.props.history.push('/fiche-logement') 
-    }
+       
         return (
             <div className ="thumbs">
                 <ul className ="thumbs-list">
                 {this.props.datas && this.props.datas.map((thumb,index) => (
-                    <li className="thumb" key={index} data-data = {thumb.id} onClick = {redirect}>
-                        <img data-data = {thumb.id} src = {thumb.cover} alt ={thumb.title} />
+                    <Link to={"/fiche-logement/" + thumb.id}  key={index} style={{ textDecoration: 'none' }}>
+                    <li className="thumb" key={index} data-data = {thumb.id} >
+                        <img  data-data = {thumb.id} src = {thumb.cover} alt ={thumb.title} />
                         <p data-data = {thumb.id}> {thumb.title}</p>
                         </li>
+                        </Link>
                      ))}
                 </ul>
             </div>

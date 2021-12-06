@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import AProposDropDowns from '../components/AProposDropDowns';
 import APropospicture from '../components/AProposPicture';
+import Dropdown from '../components/Dropdown';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import {aProposData} from '../database/aProposData.js'
@@ -11,7 +11,7 @@ class APropos extends Component {
                  <Header />
                  <APropospicture />
                  {aProposData.map((data , index) => (
-                     <AProposDropDowns key={index} token = {index} />
+                      < Dropdown key={index} data={data.content} title={data.title} maxiWidth={true} unCollapse ={data.unCollapse}/>
                  ))
                      }
                  <Footer />

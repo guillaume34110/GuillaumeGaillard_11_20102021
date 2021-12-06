@@ -7,6 +7,9 @@ class Tag extends Component {
             tagNames : props.tagNames
         }
     }
+    componentDidUpdate() {
+        if (this.state.tagNames !== this.props.tagNames) this.setState({ tagNames: this.props.tagNames})
+    }
     render() {
         return (
             <div className="tags">
